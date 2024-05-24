@@ -1,0 +1,5 @@
+install the playwright using npm command
+
+npm install playwright @playwright/test
+
+

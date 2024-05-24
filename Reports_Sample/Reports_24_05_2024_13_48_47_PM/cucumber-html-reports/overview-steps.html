@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>General Information Form - Test Automation &amp; IT Consultancy Services</td>
+      <td>24 May 2024, 13:48</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.stepdefination.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="4158691500">4.158</td>
+              <td class="duration" data-value="4158691500">4.158</td>
+              <td class="duration" data-value="4158691500">4.158</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_click_on_gender(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="126992700">0.126</td>
+              <td class="duration" data-value="126992700">0.126</td>
+              <td class="duration" data-value="126992700">0.126</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_Address_Two(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="40014500">0.040</td>
+              <td class="duration" data-value="40014500">0.040</td>
+              <td class="duration" data-value="40014500">0.040</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_continent(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="48636400">0.048</td>
+              <td class="duration" data-value="48636400">0.048</td>
+              <td class="duration" data-value="48636400">0.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_intermediate_Percentage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4255544000">4.255</td>
+              <td class="duration" data-value="4255544000">4.255</td>
+              <td class="duration" data-value="4255544000">4.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_Address_One(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="69889100">0.069</td>
+              <td class="duration" data-value="69889100">0.069</td>
+              <td class="duration" data-value="69889100">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_Engineering(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="38189500">0.038</td>
+              <td class="duration" data-value="38189500">0.038</td>
+              <td class="duration" data-value="38189500">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_Intermediate(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="36363200">0.036</td>
+              <td class="duration" data-value="36363200">0.036</td>
+              <td class="duration" data-value="36363200">0.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_Last_Name(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="30555900">0.030</td>
+              <td class="duration" data-value="30555900">0.030</td>
+              <td class="duration" data-value="30555900">0.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_Middle_Name(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="39300400">0.039</td>
+              <td class="duration" data-value="39300400">0.039</td>
+              <td class="duration" data-value="39300400">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_Primary_School(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1302418100">1.302</td>
+              <td class="duration" data-value="1302418100">1.302</td>
+              <td class="duration" data-value="1302418100">1.302</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_Secondary_School(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="32798700">0.032</td>
+              <td class="duration" data-value="32798700">0.032</td>
+              <td class="duration" data-value="32798700">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_University(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="39482300">0.039</td>
+              <td class="duration" data-value="39482300">0.039</td>
+              <td class="duration" data-value="39482300">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_first_name(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="78792400">0.078</td>
+              <td class="duration" data-value="78792400">0.078</td>
+              <td class="duration" data-value="78792400">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.i_enter_the_name_a_phone_number(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="33851000">0.033</td>
+              <td class="duration" data-value="33851000">0.033</td>
+              <td class="duration" data-value="33851000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.userOnLoginPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="11511492600">11.511</td>
+              <td class="duration" data-value="11511492600">11.511</td>
+              <td class="duration" data-value="11511492600">11.511</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefination.TestZen.validateTheHomepage()</td>
+              <td>1</td>
+              <td class="duration" data-value="5031117900">5.031</td>
+              <td class="duration" data-value="5031117900">5.031</td>
+              <td class="duration" data-value="5031117900">5.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>17</td>
+            <td>17</td>
+            <td class="duration">1.580</td>
+            <td class="duration">11.511</td>
+            <td class="duration">26.874</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
