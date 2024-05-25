@@ -34,7 +34,13 @@ public class ApplicationHooks {
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
             byte[] screenshot = page.screenshot(new Page.ScreenshotOptions().setFullPage(true));
+            scenario.attach(screenshot,"image/jpeg",scenario.getName());
             Allure.addAttachment("screenshot", new ByteArrayInputStream(screenshot));
+        }
+
+        else {
+            byte[] screenshot = page.screenshot(new Page.ScreenshotOptions().setFullPage(true));
+            scenario.attach(screenshot,"image/jpeg",scenario.getName());
         }
         driverManager.closeBrowser();
     }
