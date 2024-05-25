@@ -2,6 +2,7 @@ package com.pages;
 
 import com.base.ActionClass;
 import com.microsoft.playwright.Page;
+import org.openqa.selenium.By;
 
 
 public class Educationpage {
@@ -16,8 +17,8 @@ public class Educationpage {
     String Engineering = "//input[@placeholder='Engineering College Name']";
     String University = "//input[@placeholder='University Name']";
     String Intermediate_Percentage = "//input[@placeholder='Intermediate Percentage']";
-    String Gender = "//input[@id='profession-0']";
-
+//    String Gender = "//input[@id='profession-0']";
+By Gender1 = By.xpath( "//input[@id='profession-0']");
     public Educationpage(Page page) {
 
         this.page = page;
@@ -79,7 +80,11 @@ public class Educationpage {
     public  void Gender(String gender) throws InterruptedException
 
     {
-        actions.click(Gender);
+        actions.waitforSeconds(1);
+        actions.waitforlementvisbility(Gender1, 3);
+        actions.clickUsingJS(Gender1);
+//        actions.click(Gender);
+
 
     }
 

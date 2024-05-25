@@ -21,13 +21,12 @@ public class ApplicationHooks {
     public ApplicationHooks(DriverManager driverManager){
         try {
             this.driverManager=driverManager;
-            this.driverManager.initializeDriver();
             this.page = driverManager.getPage();
             configReader = new ConfigReader();
             prop = configReader.init_prop();
         }
         catch (Exception e){
-            e.printStackTrace();
+            throw e;
         }
     }
 
