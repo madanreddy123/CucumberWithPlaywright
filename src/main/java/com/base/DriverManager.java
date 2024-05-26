@@ -5,6 +5,7 @@ import com.microsoft.playwright.*;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 import org.testng.Reporter;
 
+import java.time.Duration;
 import java.util.Properties;
 
 public class DriverManager {
@@ -50,12 +51,13 @@ public class DriverManager {
             case "gridchrome":
                 String hostIp = System.getProperty("host.ip", "localhost");
                 System.setProperty("host.ip", hostIp);
-                browser= playwright.firefox().launch(new LaunchOptions().setHeadless(false));
+                browser= playwright.chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false));
                 break;
             default:
                 throw new IllegalArgumentException("Unexpected browser: " + BrowserName);
         }
         context = browser.newContext();
+        context.setDefaultTimeout(1000*10);
         page = context.newPage();
     }
 
