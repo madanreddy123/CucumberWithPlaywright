@@ -49,9 +49,9 @@ public class DriverManager {
                 browser= playwright.firefox().launch(new LaunchOptions().setHeadless(false));
                 break;
             case "gridchrome":
-                String hostIp = System.getProperty("host.ip", "localhost");
-                System.setProperty("host.ip", hostIp);
-                browser= playwright.chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false));
+
+                String wsendpoint = "ws://localhost:56214/239ac884a1acbce4b0b144e09f7712be";
+                browser= playwright.chromium().connect(wsendpoint);
                 break;
             default:
                 throw new IllegalArgumentException("Unexpected browser: " + BrowserName);

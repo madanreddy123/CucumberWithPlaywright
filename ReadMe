@@ -2,4 +2,9 @@ install the playwright using npm command
 
 npm install playwright @playwright/test
 
+To start the websocket server run the below command
+
+node .\start-playwright-server.js
+
+
 
