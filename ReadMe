@@ -5,18 +5,3 @@ npm install playwright @playwright/test
 To start the websocket server run the below command
 
 node .\start-playwright-server.js
-
-
-![Image](file-service://file-JHViHcvgQWF1oCgn819iuQ1Y)
-
-Here is a visualization of the Selenium Grid setup on OpenShift pods:
-
-- **OpenShift Cluster**: The large blue box represents the OpenShift cluster.
-- **Selenium Hub Pod**: The green box within the cluster represents the Selenium Grid Hub, which coordinates the test execution.
-- **Selenium Node Pods**: The orange boxes represent multiple Selenium Grid Node pods. These nodes are where the actual tests are executed across different browsers and environments.
-- **Arrows**: The arrows illustrate the communication between the Hub and the Nodes, with the Hub distributing tests to the Nodes for parallel execution.
-
-This setup demonstrates how Selenium Grid components can be containerized and managed within an OpenShift environment, allowing for scalable and efficient test automation.
-
-
-
